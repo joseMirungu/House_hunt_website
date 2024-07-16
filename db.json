@@ -1,0 +1,45 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "name": "Luxury Villa",
+        "location": "Roysambu",
+        "price": "ksh12,000",
+        "type": "1 bedroom",
+        "image": "img/flat1.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Muthaiga flats",
+        "location": "Muthaiga",
+        "price": "ksh20,000",
+        "type": "1 bedroom",
+        "image": "img/flat2.jpg"
+      },
+      {
+        "id": 3,
+        "name": "x-star flats",
+        "location": "Kasarani",
+        "price": "ksh8,000",
+        "type": "Bedsitter",
+        "image": "img/flat3.jpg"
+      },
+      {
+        "id": 4,
+        "name": "Family Heritage",
+        "location": "Ruaka",
+        "price": "ksh30,000",
+        "type": "2 bedroom",
+        "image": "img/flat4.jpg"
+      },
+      {
+        "id": 5,
+        "name": "JML flats",
+        "location": "Thika",
+        "price": "2 bedrom",
+        "type": "ksh20,000",
+        "image": "img/flat5.jpg"
+      }
+    ]
+  }
+  
