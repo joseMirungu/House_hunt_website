@@ -1,45 +1,102 @@
 {
-    "properties": [
-      {
-        "id": 1,
-        "name": "Luxury Villa",
-        "location": "Roysambu",
-        "price": "ksh12,000",
-        "type": "1 bedroom",
-        "image": "img/flat1.jpg"
-      },
-      {
-        "id": 2,
-        "name": "Muthaiga flats",
-        "location": "Muthaiga",
-        "price": "ksh20,000",
-        "type": "1 bedroom",
-        "image": "img/flat2.jpg"
-      },
-      {
-        "id": 3,
-        "name": "x-star flats",
-        "location": "Kasarani",
-        "price": "ksh8,000",
-        "type": "Bedsitter",
-        "image": "img/flat3.jpg"
-      },
-      {
-        "id": 4,
-        "name": "Family Heritage",
-        "location": "Ruaka",
-        "price": "ksh30,000",
-        "type": "2 bedroom",
-        "image": "img/flat4.jpg"
-      },
-      {
-        "id": 5,
-        "name": "JML flats",
-        "location": "Thika",
-        "price": "2 bedrom",
-        "type": "ksh20,000",
-        "image": "img/flat5.jpg"
-      }
-    ]
-  }
-  
+  "properties": [
+    {
+      "id": "1",
+      "name": "Luxury Villa",
+      "location": "Roysambu",
+      "price": "5000",
+      "type": "1 Bedroom",
+      "image": "img/flat1.jpg",
+      "ownerPhone": "123-456-7890",
+      "ownerEmail": "owner1@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Muthaiga flats",
+      "location": "Muthaiga",
+      "price": "20000",
+      "type": "1 bedroom",
+      "image": "img/flat2.jpg",
+      "ownerPhone": "123-456-7890",
+      "ownerEmail": "owner2@example.com"
+    },
+    {
+      "id": "3",
+      "name": "x-star flats",
+      "location": "Kasarani",
+      "price": 8000,
+      "type": "Bedsitter",
+      "image": "img/flat3.jpg",
+      "ownerPhone": "123-456-7890",
+      "ownerEmail": "owner3@example.com"
+    },
+    {
+      "id": "4",
+      "name": "Family Heritage",
+      "location": "Ruaka",
+      "price": "30000",
+      "type": "2 Bedroom",
+      "image": "img/flat4.jpg",
+      "ownerPhone": "123-456-7890",
+      "ownerEmail": "owner4@example.com"
+    },
+    {
+      "id": "5",
+      "name": "JML flats",
+      "location": "Thika",
+      "price": "20000",
+      "type": "2 Bedroom",
+      "image": "img/flat5.jpg",
+      "ownerPhone": "123-456-7890",
+      "ownerEmail": "owner5@example.com"
+    }
+  ],
+  "users": [
+    {
+      "id": "e8f1",
+      "email": "joe@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "1c83",
+      "email": "jane@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "a028",
+      "email": "doe@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2c04",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "1",
+      "userId": "e8f1",
+      "userName": "joe@gmail.com",
+      "rating": 5,
+      "text": "Great experience with House Hunt!",
+      "date": "2024-07-17"
+    },
+    {
+      "id": "1659",
+      "userId": "2c04",
+      "userName": "joseph@gmail.com",
+      "text": "mm",
+      "rating": "4",
+      "date": "2024-07-17"
+    },
+    {
+      "id": "3961",
+      "userId": "2c04",
+      "userName": "joseph@gmail.com",
+      "text": "Awesome experience",
+      "rating": "2",
+      "date": "2024-07-17"
+    }
+  ]
+}
