@@ -106,7 +106,7 @@
       "id": "1659",
       "userId": "2c04",
       "userName": "joseph@gmail.com",
-      "text": "mm",
+      "text": "easy user interface",
       "rating": "4",
       "date": "2024-07-17"
     },
@@ -137,28 +137,10 @@
   ],
   "contacts": [
     {
-      "id": "e909",
+      "id": "3e32",
       "name": "JOSEPH",
-      "email": "josephirungu898@gmail.com",
-      "message": "sth wrong"
-    },
-    {
-      "id": "46be",
-      "name": "mark",
-      "email": "josephirungu610@gmail.com",
-      "message": "mmmmm"
-    },
-    {
-      "id": "5847",
-      "name": "JOSEPH",
-      "email": "josephirungu898@gmail.com",
-      "message": "edcc"
-    },
-    {
-      "id": "cc21",
-      "name": "JOSEPH",
-      "email": "josephirungu898@gmail.com",
-      "message": "jjjjjjjhhh"
+      "email": "jose@gmail.com",
+      "message": "i want an apartment"
     }
   ]
 }
