@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let loggedInUser = null;
 
     const fetchTestimonials = () => {
-        fetch('http://localhost:3000/testimonials')
+        fetch('https://db-nine-topaz.vercel.app/testimonials')
             .then(response => response.json())
             .then(testimonials => displayTestimonials(testimonials))
             .catch(error => console.error('Error fetching testimonials:', error));
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = document.getElementById('testimonialText').value;
         const rating = document.getElementById('testimonialRating').value;
 
-        fetch('http://localhost:3000/testimonials', {
+        fetch('https://db-nine-topaz.vercel.app/testimonials', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.modal .close');
 
     function fetchProperties() {
-        fetch('http://localhost:3000/properties')
+        fetch('https://db-nine-topaz.vercel.app/properties')
             .then(response => response.json())
             .then(properties => {
                 const propertiesList = document.getElementById('properties-list');
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             return;
                         }
                         const propertyId = event.target.getAttribute('data-id');
-                        fetch(`http://localhost:3000/properties/${propertyId}`)
+                        fetch(`https://db-nine-topaz.vercel.app/properties/${propertyId}`)
                             .then(response => response.json())
                             .then(property => {
                                 document.getElementById('propertyName').innerText = property.name;
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
                 const propertyId = event.target.getAttribute('data-id');
-                fetch(`http://localhost:3000/properties/${propertyId}`)
+                fetch(`https://db-nine-topaz.vercel.app/properties/${propertyId}`)
                     .then(response => response.json())
                     .then(property => {
                         document.getElementById('propertyName').innerText = property.name;
@@ -181,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const propertyType = document.getElementById('propertyType').value;
         const propertyLocation = document.getElementById('propertyLocation').value.toLowerCase(); // Get location input
 
-        fetch('http://localhost:3000/properties')
+        fetch('https://db-nine-topaz.vercel.app/properties')
             .then(response => response.json())
             .then(data => {
                 let filteredProperties = data;
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
 
-        fetch('http://localhost:3000/users')
+        fetch('https://db-nine-topaz.vercel.app/users')
             .then(response => response.json())
             .then(users => {
                 const user = users.find(user => user.email === email && user.password === password);
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('signupEmail').value;
         const password = document.getElementById('signupPassword').value;
 
-        fetch('http://localhost:3000/users', {
+        fetch('https://db-nine-topaz.vercel.app/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -301,7 +301,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         message: message
     };
 
-    fetch('http://localhost:3000/contacts', {
+    fetch('https://db-nine-topaz.vercel.app/contacts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
