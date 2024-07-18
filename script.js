@@ -274,7 +274,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 loginForm.style.display = 'block';
             })
             .catch(error => {
-                console.error('Error:', error);
+                console.log('Error:', error);
                 alert('Error during signup. Please try again.');
             });
     });
