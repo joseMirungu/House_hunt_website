@@ -7,7 +7,7 @@
       "price": "5000",
       "type": "1 Bedroom",
       "image": "img/flat1.jpg",
-   "ownerPhone": "0790771314",
+      "ownerPhone": "0790771314",
       "ownerEmail": "jose@gmail.com.com"
     },
     {
@@ -27,7 +27,7 @@
       "price": 8000,
       "type": "Bedsitter",
       "image": "img/flat3.jpg",
-    "ownerPhone": "0790771314",
+      "ownerPhone": "0790771314",
       "ownerEmail": "jose@gmail.com.com"
     },
     {
@@ -37,7 +37,7 @@
       "price": "30000",
       "type": "2 Bedroom",
       "image": "img/flat4.jpg",
-     "ownerPhone": "0790771314",
+      "ownerPhone": "0790771314",
       "ownerEmail": "jose@gmail.com.com"
     },
     {
@@ -47,7 +47,7 @@
       "price": "20000",
       "type": "2 Bedroom",
       "image": "img/flat5.jpg",
-     "ownerPhone": "0790771314",
+      "ownerPhone": "0790771314",
       "ownerEmail": "jose@gmail.com.com"
     }
   ],
@@ -89,6 +89,41 @@
     },
     {
       "id": "85dd",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "b752",
+      "email": "jo@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "e054",
+      "email": "josephirush@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "aca4",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "c338",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "f2b7",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "e84d",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "33b3",
       "email": "joseph@gmail.com",
       "password": "1234"
     }
@@ -133,6 +168,14 @@
       "text": "good website",
       "rating": "5",
       "date": "2024-07-18"
+    },
+    {
+      "id": "b8d5",
+      "userId": "2c04",
+      "userName": "joseph@gmail.com",
+      "text": "good",
+      "rating": "4",
+      "date": "2024-07-18"
     }
   ],
   "contacts": [
@@ -141,6 +184,18 @@
       "name": "JOSEPH",
       "email": "jose@gmail.com",
       "message": "i want an apartment"
+    },
+    {
+      "id": "6acf",
+      "name": "JOSEPH",
+      "email": "josephirungu898@gmail.com",
+      "message": "want an apartment"
+    },
+    {
+      "id": "03fd",
+      "name": "joseph",
+      "email": "josephirungu898@gmail.com",
+      "message": "I WANT AN APartment"
     }
   ]
 }

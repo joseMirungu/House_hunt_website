@@ -4,16 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const next = document.getElementById('next');
     let currentIndex = 0;
     let loggedInUser = null;
-   
-    
-     const fetchTestimonials = () => {
-        fetch('https://db-nine-topaz.vercel.app/testimonials')
+
+    const fetchTestimonials = () => {
+        fetch('http://localhost:3000/testimonials')
             .then(response => response.json())
             .then(testimonials => displayTestimonials(testimonials))
             .catch(error => console.error('Error fetching testimonials:', error));
     };
 
-    
     const displayTestimonials = (testimonials) => {
         const testimonialsList = document.getElementById('testimonials-list');
         testimonialsList.innerHTML = '';
@@ -30,10 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-
     fetchTestimonials();
 
-  
     const submitTestimonialForm = document.getElementById('submitTestimonialForm');
     submitTestimonialForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -45,8 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = document.getElementById('testimonialText').value;
         const rating = document.getElementById('testimonialRating').value;
 
-        
-        fetch('https://db-nine-topaz.vercel.app/testimonials', {
+        fetch('http://localhost:3000/testimonials', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -67,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => console.error('Error submitting testimonial:', error));
     });
+
     function showSlide(index) {
         const totalSlides = slides.children.length;
         if (index >= totalSlides) {
@@ -97,47 +93,47 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = document.querySelector('.modal .close');
 
     function fetchProperties() {
-        fetch('https://db-nine-topaz.vercel.app/properties')
-        .then(response => response.json())
-        .then(properties => {
-            const propertiesList = document.getElementById('properties-list');
-            propertiesList.innerHTML = '';
-            properties.forEach(property => {
-                const propertyCard = document.createElement('div');
-                propertyCard.className = 'property-card';
-                propertyCard.innerHTML = `
-                    <img src="${property.image}" alt="${property.name}">
-                    <h3>${property.name}</h3>
-                    <p>Location: ${property.location}</p>
-                    <p>Price: ksh${property.price}</p>
-                    <p>Type: ${property.type}</p>
-                    <button data-id="${property.id}">View</button>
-                `;
-                propertiesList.appendChild(propertyCard);
-            });
+        fetch('http://localhost:3000/properties')
+            .then(response => response.json())
+            .then(properties => {
+                const propertiesList = document.getElementById('properties-list');
+                propertiesList.innerHTML = '';
+                properties.forEach(property => {
+                    const propertyCard = document.createElement('div');
+                    propertyCard.className = 'property-card';
+                    propertyCard.innerHTML = `
+                        <img src="${property.image}" alt="${property.name}">
+                        <h3>${property.name}</h3>
+                        <p>Location: ${property.location}</p>
+                        <p>Price: ksh${property.price}</p>
+                        <p>Type: ${property.type}</p>
+                        <button data-id="${property.id}">View</button>
+                    `;
+                    propertiesList.appendChild(propertyCard);
+                });
 
-            document.querySelectorAll('.property-card button').forEach(button => {
-                button.addEventListener('click', event => {
-                    if (!loggedInUser) {
-                        alert('Please login to view the property details.');
-                        return;
-                    }
-                    const propertyId = event.target.getAttribute('data-id');
-                    fetch(`https://db-nine-topaz.vercel.app/properties/${propertyId}`)
-                        .then(response => response.json())
-                        .then(property => {
-                            document.getElementById('propertyName').innerText = property.name;
-                            document.getElementById('propertyLocation').innerText = `Location: ${property.location}`;
-                            document.getElementById('propertyPrice').innerText = `Price: ksh${property.price}`;
-                            document.getElementById('propertyType').innerText = `Type: ${property.type}`;
-                            document.getElementById('propertyImage').src = property.image;
-                            document.getElementById('propertyOwnerPhone').innerText = `Phone: ${property.ownerPhone}`;
-                            document.getElementById('propertyOwnerEmail').innerText = `Email: ${property.ownerEmail}`;
-                            document.getElementById('propertyModal').style.display = 'block';
-                        });
+                document.querySelectorAll('.property-card button').forEach(button => {
+                    button.addEventListener('click', event => {
+                        if (!loggedInUser) {
+                            alert('Please login to view the property details.');
+                            return;
+                        }
+                        const propertyId = event.target.getAttribute('data-id');
+                        fetch(`http://localhost:3000/properties/${propertyId}`)
+                            .then(response => response.json())
+                            .then(property => {
+                                document.getElementById('propertyName').innerText = property.name;
+                                document.getElementById('propertyLocation').innerText = `Location: ${property.location}`;
+                                document.getElementById('propertyPrice').innerText = `Price: ksh${property.price}`;
+                                document.getElementById('propertyType').innerText = `Type: ${property.type}`;
+                                document.getElementById('propertyImage').src = property.image;
+                                document.getElementById('propertyOwnerPhone').innerText = `Phone: ${property.ownerPhone}`;
+                                document.getElementById('propertyOwnerEmail').innerText = `Email: ${property.ownerEmail}`;
+                                document.getElementById('propertyModal').style.display = 'block';
+                            });
+                    });
                 });
             });
-        });
     }
 
     function displayProperties(properties) {
@@ -164,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     return;
                 }
                 const propertyId = event.target.getAttribute('data-id');
-                fetch(`https://db-nine-topaz.vercel.app/properties/${propertyId}`)
+                fetch(`http://localhost:3000/properties/${propertyId}`)
                     .then(response => response.json())
                     .then(property => {
                         document.getElementById('propertyName').innerText = property.name;
@@ -184,8 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const priceRange = document.getElementById('priceRange').value;
         const propertyType = document.getElementById('propertyType').value;
         const propertyLocation = document.getElementById('propertyLocation').value.toLowerCase(); // Get location input
-    
-        fetch('https://db-nine-topaz.vercel.app/properties')
+
+        fetch('http://localhost:3000/properties')
             .then(response => response.json())
             .then(data => {
                 let filteredProperties = data;
@@ -202,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 displayProperties(filteredProperties);
             });
     });
-    
+
     closeModal.addEventListener('click', () => {
         propertyModal.style.display = 'none';
     });
@@ -213,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-  
     const loginBtn = document.querySelector('.login-btn');
     const loginModal = document.getElementById('loginModal');
     const showSignup = document.getElementById('showSignup');
@@ -242,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('loginEmail').value;
         const password = document.getElementById('loginPassword').value;
 
-        fetch('https://db-nine-topaz.vercel.app/users')
+        fetch('http://localhost:3000/users')
             .then(response => response.json())
             .then(users => {
                 const user = users.find(user => user.email === email && user.password === password);
@@ -265,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const email = document.getElementById('signupEmail').value;
         const password = document.getElementById('signupPassword').value;
 
-        fetch('https://db-nine-topaz.vercel.app/users', {
+        fetch('http://localhost:3000/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -277,6 +272,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Signup successful');
                 signupForm.style.display = 'none';
                 loginForm.style.display = 'block';
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error during signup. Please try again.');
             });
     });
 
@@ -285,7 +284,6 @@ document.addEventListener('DOMContentLoaded', () => {
             loginModal.style.display = 'none';
         }
     });
-    
 
     fetchProperties();
 });
@@ -303,7 +301,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         message: message
     };
 
-    fetch('https://db-nine-topaz.vercel.app/contacts', {
+    fetch('http://localhost:3000/contacts', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
