@@ -5,13 +5,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentIndex = 0;
     let loggedInUser = null;
    
-    const fetchTestimonials = () => {
+    
+     const fetchTestimonials = () => {
         fetch('http://localhost:3000/testimonials')
             .then(response => response.json())
             .then(testimonials => displayTestimonials(testimonials))
             .catch(error => console.error('Error fetching testimonials:', error));
     };
 
+    
     const displayTestimonials = (testimonials) => {
         const testimonialsList = document.getElementById('testimonials-list');
         testimonialsList.innerHTML = '';
@@ -28,9 +30,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
+
+    fetchTestimonials();
+
   
     const submitTestimonialForm = document.getElementById('submitTestimonialForm');
-
     submitTestimonialForm.addEventListener('submit', (e) => {
         e.preventDefault();
         if (!loggedInUser) {
@@ -41,6 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const text = document.getElementById('testimonialText').value;
         const rating = document.getElementById('testimonialRating').value;
 
+        
         fetch('http://localhost:3000/testimonials', {
             method: 'POST',
             headers: {
@@ -58,11 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(() => {
                 document.getElementById('testimonialText').value = '';
                 document.getElementById('testimonialRating').value = '';
-                fetchTestimonials();
+                fetchTestimonials(); 
             })
             .catch(error => console.error('Error submitting testimonial:', error));
     });
-
     function showSlide(index) {
         const totalSlides = slides.children.length;
         if (index >= totalSlides) {
@@ -179,7 +183,8 @@ document.addEventListener('DOMContentLoaded', () => {
     searchButton.addEventListener('click', () => {
         const priceRange = document.getElementById('priceRange').value;
         const propertyType = document.getElementById('propertyType').value;
-
+        const propertyLocation = document.getElementById('propertyLocation').value.toLowerCase(); // Get location input
+    
         fetch('http://localhost:3000/properties')
             .then(response => response.json())
             .then(data => {
@@ -191,10 +196,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (propertyType) {
                     filteredProperties = filteredProperties.filter(property => property.type === propertyType);
                 }
+                if (propertyLocation) {
+                    filteredProperties = filteredProperties.filter(property => property.location.toLowerCase().includes(propertyLocation));
+                }
                 displayProperties(filteredProperties);
             });
     });
-
+    
     closeModal.addEventListener('click', () => {
         propertyModal.style.display = 'none';
     });
@@ -280,4 +288,35 @@ document.addEventListener('DOMContentLoaded', () => {
     
 
     fetchProperties();
+});
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    const contactData = {
+        name: name,
+        email: email,
+        message: message
+    };
+
+    fetch('http://localhost:3000/contacts', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(contactData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Your message has been sent successfully!');
+        document.getElementById('contactForm').reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again later.');
+    });
 });

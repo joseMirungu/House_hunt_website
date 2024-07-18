@@ -71,6 +71,26 @@
       "id": "2c04",
       "email": "joseph@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "ae11",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "e907",
+      "email": "jo@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "0bf7",
+      "email": "joseph@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "85dd",
+      "email": "joseph@gmail.com",
+      "password": "1234"
     }
   ],
   "testimonials": [
@@ -97,6 +117,48 @@
       "text": "Awesome experience",
       "rating": "2",
       "date": "2024-07-17"
+    },
+    {
+      "id": "c3f9",
+      "userId": "2c04",
+      "userName": "joseph@gmail.com",
+      "text": "Very helpful indeed",
+      "rating": "5",
+      "date": "2024-07-18"
+    },
+    {
+      "id": "c825",
+      "userId": "e907",
+      "userName": "jo@gmail.com",
+      "text": "good website",
+      "rating": "5",
+      "date": "2024-07-18"
+    }
+  ],
+  "contacts": [
+    {
+      "id": "e909",
+      "name": "JOSEPH",
+      "email": "josephirungu898@gmail.com",
+      "message": "sth wrong"
+    },
+    {
+      "id": "46be",
+      "name": "mark",
+      "email": "josephirungu610@gmail.com",
+      "message": "mmmmm"
+    },
+    {
+      "id": "5847",
+      "name": "JOSEPH",
+      "email": "josephirungu898@gmail.com",
+      "message": "edcc"
+    },
+    {
+      "id": "cc21",
+      "name": "JOSEPH",
+      "email": "josephirungu898@gmail.com",
+      "message": "jjjjjjjhhh"
     }
   ]
 }
