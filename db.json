@@ -7,8 +7,8 @@
       "price": "5000",
       "type": "1 Bedroom",
       "image": "img/flat1.jpg",
-      "ownerPhone": "123-456-7890",
-      "ownerEmail": "owner1@example.com"
+   "ownerPhone": "0790771314",
+      "ownerEmail": "jose@gmail.com.com"
     },
     {
       "id": "2",
@@ -17,8 +17,8 @@
       "price": "20000",
       "type": "1 bedroom",
       "image": "img/flat2.jpg",
-      "ownerPhone": "123-456-7890",
-      "ownerEmail": "owner2@example.com"
+      "ownerPhone": "0790771314",
+      "ownerEmail": "jose@gmail.com.com"
     },
     {
       "id": "3",
@@ -27,8 +27,8 @@
       "price": 8000,
       "type": "Bedsitter",
       "image": "img/flat3.jpg",
-      "ownerPhone": "123-456-7890",
-      "ownerEmail": "owner3@example.com"
+    "ownerPhone": "0790771314",
+      "ownerEmail": "jose@gmail.com.com"
     },
     {
       "id": "4",
@@ -37,8 +37,8 @@
       "price": "30000",
       "type": "2 Bedroom",
       "image": "img/flat4.jpg",
-      "ownerPhone": "123-456-7890",
-      "ownerEmail": "owner4@example.com"
+     "ownerPhone": "0790771314",
+      "ownerEmail": "jose@gmail.com.com"
     },
     {
       "id": "5",
@@ -47,8 +47,8 @@
       "price": "20000",
       "type": "2 Bedroom",
       "image": "img/flat5.jpg",
-      "ownerPhone": "123-456-7890",
-      "ownerEmail": "owner5@example.com"
+     "ownerPhone": "0790771314",
+      "ownerEmail": "jose@gmail.com.com"
     }
   ],
   "users": [
