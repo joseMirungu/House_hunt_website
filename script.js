@@ -255,36 +255,29 @@ document.addEventListener('DOMContentLoaded', () => {
             });
     });
 
-   signupFormElement.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const email = document.getElementById('signupEmail').value;
-    const password = document.getElementById('signupPassword').value;
+    signupFormElement.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('signupEmail').value;
+        const password = document.getElementById('signupPassword').value;
 
-    fetch('https://house-hunt-backend.vercel.app/users', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.text().then(text => { throw new Error(text) });
-        }
-        return response.json();
-    })
-    .then(user => {
-        alert('Signup successful');
-        signupForm.style.display = 'none';
-        loginForm.style.display = 'block';
-    })
-    .catch(error => {
-        console.error('Error during signup:', error);
-        alert(`Error during signup: ${error.message}`);
+        fetch('https://house-hunt-backend.vercel.app/users', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        })
+            .then(response => response.json())
+            .then(user => {
+                alert('Signup successful');
+                signupForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            })
+            .catch(error => {
+                console.log('Error:', error);
+                alert('Error during signup. Please try again.');
+            });
     });
-});
-
-
     window.addEventListener('click', (event) => {
         if (event.target == loginModal) {
             loginModal.style.display = 'none';
