@@ -58,6 +58,7 @@ or
 ## Video Explanation
 
 For a detailed walkthrough of the project, watch the video below:
+[HOUSE HUNT PROJECT DEMO](https://drive.google.com/file/d/1jyTxA_DP9HsC0X4xjCdKGvce0HTDwjGz/view?usp=sharing)
 
 
 
