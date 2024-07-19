@@ -52,7 +52,7 @@ The House Hunt Website is a comprehensive platform designed to help users find h
 Check out the live version of the website here: 
 [House Hunt Website Live](https://house-hunt-website.vercel.app/)
 or
-[House Hunt Website GitHub](https://github.com/joseMirungu/House_hunt_website)
+[House Hunt Website GitHub](https://josemirungu.github.io/House_hunt_website/))
 
 
 ## Video Explanation
