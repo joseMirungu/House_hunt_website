@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .then(response => {
         if (!response.ok) {
-            return response.json().then(err => { throw new Error(err.message) });
+            return response.text().then(text => { throw new Error(text) });
         }
         return response.json();
     })
@@ -283,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
         alert(`Error during signup: ${error.message}`);
     });
 });
+
 
     window.addEventListener('click', (event) => {
         if (event.target == loginModal) {
