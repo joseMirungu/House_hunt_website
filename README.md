@@ -47,10 +47,15 @@ The House Hunt Website is a comprehensive platform designed to help users find h
 4. View property details and contact the owner if needed.
 5. Submit testimonials through the testimonial form.
 
+## Live Demo
+
+Check out the live version of the website here: [House Hunt Website Live](https://house-hunt-website.vercel.app/)
+
+
 ## Video Explanation
 
 For a detailed walkthrough of the project, watch the video below:
 
-[![Project Explanation](https://img.youtube.com/vi/your-video-id/maxresdefault.jpg)](https://www.youtube.com/watch?v=your-video-id)
+
 
 
